@@ -1,0 +1,25 @@
+<template>
+
+    <lightning-button label="Get Accounts" onclick={handle}></lightning-button>
+    <table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Industry</th>
+</tr>
+
+<template for:each={accounts} for:item="acc">
+    <tr key={acc.Id}>
+<td>{acc.Id}</td>
+<td>{acc.Name}</td>
+<td>{acc.Phone}</td>
+<td>{acc.Industry}</td>
+
+    </tr>
+
+</template>
+
+
+    </table>
+</template>

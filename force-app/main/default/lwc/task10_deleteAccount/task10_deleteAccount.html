@@ -1,0 +1,19 @@
+<template>
+    <lightning-button label="fetchAccounts" onclick={fetch}></lightning-button>
+   <table>
+<tr>
+    <th>ID</th>
+    <th>NAME</th>
+</tr>
+
+<template for:each={accounts} for:item="acc">
+<tr key={acc.Id}>
+<td>{acc.Id}</td>
+<td>{acc.Name}</td>
+<td><lightning-button label="DELETE" value={acc.Id} onclick={handle}></lightning-button></td>
+</tr>
+</template>
+
+
+   </table> 
+</template>

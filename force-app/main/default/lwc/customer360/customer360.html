@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Customer 360">
+
+        <!-- Account Details -->
+        <template if:true={account}>
+            <div class="slds-p-around_medium">
+                <h2>Account Details</h2>
+
+                <p><strong>Name:</strong> {account.Name}</p>
+                <p><strong>Phone:</strong> {account.Phone}</p>
+                <p><strong>Customer Status:</strong> {account.Customer_Status__c}</p>
+            </div>
+        </template>
+
+
+        <!-- Service Subscriptions -->
+        <template if:true={services}>
+            <div class="slds-p-around_medium">
+                <h2>Service Subscriptions</h2>
+
+                <template for:each={services} for:item="service">
+                    <div key={service.Id} class="slds-box slds-m-bottom_small">
+                        <p><strong>Service Name:</strong> {service.Name}</p>
+                        <p><strong>Service Type:</strong> {service.Service_Type__c}</p>
+                        <p><strong>Status:</strong> {service.Status__c}</p>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+
+        <!-- Cases -->
+        <template if:true={cases}>
+            <div class="slds-p-around_medium">
+                <h2>Cases</h2>
+
+                <template for:each={cases} for:item="caseRecord">
+                    <div key={caseRecord.Id} class="slds-box slds-m-bottom_small">
+                        <p><strong>Case Number:</strong> {caseRecord.CaseNumber}</p>
+                        <p><strong>Subject:</strong> {caseRecord.Subject}</p>
+                        <p><strong>Status:</strong> {caseRecord.Status}</p>
+                        <p><strong>Priority:</strong> {caseRecord.Priority}</p>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

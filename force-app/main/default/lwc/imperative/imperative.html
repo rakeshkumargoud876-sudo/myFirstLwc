@@ -1,0 +1,27 @@
+<template>
+    <lightning-button label="GET EMPLOYEE RECORDS" onclick={getrecords}></lightning-button>
+<template if:true={showtable}>
+    <table>
+<tr>
+<th>NAME</th>
+<th>COURSE</th>
+<th>AGE</th>
+<th>CITY</th>
+</tr>
+
+<template for:each={studentrecords} for:item="std">
+<tr key={std.Id}>
+<td>{std.Name}</td>
+<td>{std.Course__c}</td>
+<td>{std.Age__c}</td>
+<td>{std.City__c}</td>
+
+
+</tr>
+
+</template>
+
+    </table>
+    </template>
+   
+</template>

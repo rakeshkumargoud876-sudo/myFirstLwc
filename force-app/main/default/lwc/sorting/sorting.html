@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-button label="GET ACCOUNT RECORDS" onclick={fetchaccounts}></lightning-button>
+    <lightning-button label="SORT BY NAME" onclick={sorting}></lightning-button>
+    
+    <table>
+        <tr>
+            <th>NAME></lightning-button></th>
+            <th>Phone</th>
+            <th>Industry</th>
+        </tr>
+
+        <template for:each={accounts} for:item="acc">
+<tr key={acc.Id}>
+<td>{acc.Name}</td>
+<td>{acc.Phone}</td>
+<td>{acc.Industry}</td>
+
+</tr>
+
+
+        </template>
+    </table>
+</template>

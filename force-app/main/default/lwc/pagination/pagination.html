@@ -1,0 +1,20 @@
+<template>
+  <lightning-button label="previous" onclick={handleprevious}></lightning-button> 
+   <lightning-button label="next" onclick={handlenext}></lightning-button>  
+   <table>
+    <tr>
+        <th>NAME</th>
+        <th>INDUSTRY</th>
+        <th>PHONE</th>
+    </tr>
+    <template for:each={displayrecords} for:item="acc">
+        <tr key={acc.Id}>
+       <td>{acc.Name}</td>
+       <td>{acc.Industry}</td>
+       <td>{acc.Phone}</td>
+        </tr>
+
+    </template>
+   </table>
+ 
+</template>

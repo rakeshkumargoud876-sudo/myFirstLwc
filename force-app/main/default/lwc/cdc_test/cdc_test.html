@@ -1,0 +1,24 @@
+
+    <template>
+    <lightning-card title="Account CDC Listener" icon-name="standard:account">
+
+        <div class="slds-p-around_medium">
+
+            <p>
+                Waiting for Account Change Events...
+            </p>
+
+            <template if:true={eventMessage}>
+                <br/>
+
+                <lightning-textarea
+                    label="Received Event"
+                    value={eventMessage}
+                    readonly>
+                </lightning-textarea>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

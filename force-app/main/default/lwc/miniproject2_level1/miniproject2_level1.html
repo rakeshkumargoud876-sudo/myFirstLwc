@@ -1,0 +1,38 @@
+<template>
+    <lightning-input label="Enter student name"   onchange={handlename}></lightning-input>
+    <lightning-input label="Enter student course" onchange={handlecourse}></lightning-input>
+    <lightning-input label="Enter student age"    onchange={handleage}></lightning-input>
+    <lightning-input label="Enter student city"   onchange={handlecity}></lightning-input>
+
+    <lightning-button label="Create Student" onclick={showstudent}></lightning-button>
+    <lightning-button label="Display records" onclick={displayrecords}></lightning-button>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>COURSE</th>
+<th>AGE</th>
+<th>CITY</th>
+<th>ACTION</th>
+</tr>
+
+<template for:each={studentdetails} for:item="sd">
+<tr key={sd.Id}>
+<td>{sd.Id}</td>
+<td>{sd.Name}</td>
+<td>{sd.Course__c}</td>
+<td>{sd.Age__c}</td>
+<td>{sd.City__c}</td>
+<td>><lightning-button label="Update" value={sd.Id} onclick={update}></lightning-button></td>
+<td><lightning-button label="Delete"  value={sd.Id} onclick={handledelete}></lightning-button></td>
+
+</tr>
+</template>
+
+</table>
+    
+
+
+</template>

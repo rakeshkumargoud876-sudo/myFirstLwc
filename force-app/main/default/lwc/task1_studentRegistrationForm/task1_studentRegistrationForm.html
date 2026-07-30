@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Student Registration Form">
+
+<lightning-input label="Enter student name" onchange={handlename}></lightning-input>
+<lightning-input label="Enter student age" onchange={handleage}></lightning-input>
+<lightning-input label="Enter student course" onchange={handlecourse}></lightning-input>
+
+<lightning-button label="save" onclick={save}></lightning-button>
+
+<p>Student Name:{name}</p>
+<p>Student Age:{age}</p>
+<p>Student Course:{course}</p>
+
+
+
+
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Billing Details">
+
+        <template lwc:if={billingdetails}>
+            <p>First Name: {billingdetails.firstName}</p>
+            <p>Last Name: {billingdetails.lastName}</p>
+            <p>Email: {billingdetails.email}</p>
+            <p>Id: {billingdetails.id}</p>
+        </template>
+
+    </lightning-card>
+</template>

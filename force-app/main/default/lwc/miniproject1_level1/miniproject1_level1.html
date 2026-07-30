@@ -1,0 +1,37 @@
+<template>
+    <lightning-input label="Enter Employee Name" onchange={handlename}></lightning-input>
+    <lightning-input label="Enter Employee Salary" onchange={handlesalary}></lightning-input>
+    <lightning-input label="Enter Employee Department" onchange={handledepartment}></lightning-input>
+    <lightning-input label="Enter Employee City" onchange={handlecity}></lightning-input>
+    <lightning-button label="Save" onclick={save}></lightning-button>
+
+    <lightning-button label="Fetch Employee" onclick={handlefetch}></lightning-button>
+    <table>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>SALARY</th>
+<th>DEPARTMENT</th>
+<th>CITY</th>
+<th>ACTION</th>
+</tr>
+
+<template for:each={employees} for:item="emp">
+<tr key={emp.Id}>
+    <td>{emp.Id}</td>
+    <td>{emp.Name}</td>
+    <td>{emp.Salary__c}</td>
+    <td>{emp.Department__c}</td>
+    <td>{emp.City__c}</td>
+    <td>
+        <lightning-button label="Delete" value={emp.Id} onclick={handledelete}></lightning-button>
+         <lightning-button label="Update" value={emp.Id} onclick={handleupdate}></lightning-button>
+   
+    </td>
+</tr>
+</template>
+
+
+    </table>
+
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <table>
+<tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>PHONE</th>
+    <th>INDUSTRY</th>
+</tr>
+<template for:each={accounts.data} for:item="emp">
+<tr key={emp.Id}>
+<td>{emp.Id}</td>
+<td>{emp.Name}</td>
+<td>{emp.Phone}</td>
+<td>{emp.Industry}</td>
+
+</tr>
+
+</template>
+
+    </table>
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <table>
+<tr>
+
+<th>NAME</th>
+<th>SALARY</th>
+<th>DEPARTMENT</th>
+<th>CITY</th>
+</tr>
+ <template for:each={employees.data} for:item="emp">
+<tr key={emp.Id}>
+
+<td>{emp.Name}</td>
+<td>{emp.Salary__c}</td>
+<td>{emp.Department__c}</td>
+<td>{emp.City__c}</td>
+</tr>
+
+
+ </template>
+
+
+
+    </table>
+</template>

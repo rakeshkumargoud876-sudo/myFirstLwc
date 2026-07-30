@@ -1,0 +1,36 @@
+<template>
+    <lightning-input label="Enter Book Name" onchange={handlename}></lightning-input>
+    <lightning-input label="Enter Authour Name" onchange={handleauthour}></lightning-input>
+    <lightning-input label="Enter Price" onchange={handleprice}></lightning-input>
+    <lightning-button label="Create" onclick={create}></lightning-button>
+    <lightning-button label="GET" onclick={get}></lightning-button>
+  
+    <h1> -------------------------  OR  -----------------------------------------</h1>
+    <lightning-input label="Search BOOK by name" onchange={handlesearch}></lightning-input>
+    <lightning-button label="Search" onclick={search}></lightning-button>
+
+<table>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>AUTHOUR</th>
+<th>PRICE</th>
+<th>ACTION</th>
+</tr>
+
+
+<template for:each={books} for:item="bk">
+<tr key={bk.Id}>
+<td>{bk.Id}</td>
+<td>{bk.Name}</td>
+<td>{bk.Authour__c}</td>
+<td>{bk.Price__c}</td>
+<td><lightning-button label="Delete" value={bk.Id} onclick={handledelete}></lightning-button></td>
+</tr>
+
+
+</template>
+</table>
+
+
+</template>

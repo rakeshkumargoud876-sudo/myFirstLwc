@@ -1,0 +1,11 @@
+<template>
+    <div class="size">
+    <lightning-card title="if_false example">
+<lightning-button label="hide message" onclick={message}></lightning-button>
+
+<template if:false={isvisible}>
+    <p>hi!welcome to salesforce</p>
+</template>
+    </lightning-card>
+    </div>
+</template>

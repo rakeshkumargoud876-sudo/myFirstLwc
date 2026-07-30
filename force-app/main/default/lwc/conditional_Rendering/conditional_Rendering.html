@@ -1,0 +1,16 @@
+<template>
+    <div class="size">
+    <lightning-card title="lwc:if and lwc:else">
+    <lightning-input label="enter your marks" onchange={number}></lightning-input>
+<lightning-button label="check results here" onclick={result}></lightning-button>
+<template lwc:if={ispassed}>
+<p>pass</p>
+</template>
+
+<template lwc:else>
+<p>fail</p>
+</template>
+
+    </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <table>
+
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>SALARY</th>
+</tr>
+<template for:each={Employee} for:item="emp">
+<tr key={emp.id}>
+<td>{emp.id}</td>
+<td>{emp.name}</td>
+<td>{emp.salary}</td>
+</tr>
+</template>
+
+    </table>
+</template>
